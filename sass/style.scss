@@ -16,7 +16,8 @@ $font-text: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  background: $color-light;
+  background-image: url(/images/background-image.jpg);
+  background-size:contain;
   font-family: $font-text;
   color: $color-dark;
   font-weight: 300;
@@ -27,6 +28,7 @@ body {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  
 }
 
 .section-title {
@@ -54,6 +56,7 @@ body {
 
 .posts {
   flex: 2 0 0;
+  position: relative;
 }
 
 .sidebar, .posts {
@@ -102,9 +105,17 @@ body {
 /* Post */
 
 .post {
-  display: none;
+  display: block;
+  margin-right: 40px;
+  opacity: 0%;
   &.active {
-    display: block;
+    position: absolute;
+    top: 40px;
+    
+    
+    
+    opacity: 100%;
+    transition: 2s;
   }
 }
 
