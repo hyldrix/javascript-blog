@@ -18,7 +18,7 @@ function titleClickHandler(event) {
   }
 
   clickedElement.classList.add("active");
-Ś
+
   const activeArticles = document.querySelectorAll(".posts article.active");
 
   for (let activeArticle of activeArticles) {
