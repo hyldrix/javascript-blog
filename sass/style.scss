@@ -17,9 +17,14 @@ $font-text: "Source Sans Pro", sans-serif;
   box-sizing: border-box;
 }
 
+p {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
 body {
   background-image: url(/images/background-image.jpg);
-  background-size: contain;
+  background-size: cover;
   font-family: $font-text;
   color: $color-dark;
   font-weight: 300;
@@ -108,17 +113,17 @@ body {
 
 /* Post */
 
+
 .post {
   display: block;
-  margin-right: 40px;
   opacity: 0%;
+  text-align: justify;
+  position: absolute;
 
   &.active {
-    position: absolute;
-    top: 40px;
-
     opacity: 100%;
     transition: 2s;
+    position: relative;
   }
 }
 
@@ -127,7 +132,7 @@ body {
 }
 
 .post-tags {
-  display: flex;
+  display: inline-flex;
 
   p {
     margin: 0 10px 0 0;
