@@ -4,7 +4,8 @@ const optArticleSelector = ".post",
   optTitleSelector = ".post-title",
   optTitleListSelector = ".titles",
   optArticleTagsSelector = ".post-tags .list",
-  optArticleAuthorSelector = ".post-author";
+  optArticleAuthorSelector = ".post-author",
+  optTagsListSelector = ".tags.list";
 
 function titleClickHandler(event) {
   event.preventDefault();
@@ -156,3 +157,62 @@ function authorClickHandler(event) {
 
   generateTitleLinks(`[data-author="${author}"]`);
 }
+
+function generateRHSTags() {
+  /* [NEW] create a new variable allTags with an empty array */
+  let allTags = [];
+
+  /* find all articles */
+  const articles = document.querySelectorAll(optArticleSelector);
+
+  /* START LOOP: for every article: */
+
+  for (let article of articles) {
+    /* find tags wrapper */
+    const tagList = article.querySelector(optArticleTagsSelector);
+    console.log(tagList)
+    /* make html variable with empty string */
+
+    let html = "";
+
+    /* get tags from data-tags attribute */
+
+    const articleTags = article.getAttribute("data-tags");
+
+    /* split tags into array */
+
+    let tagArr = articleTags.split(" ");
+    /* START LOOP: for each tag */
+
+    for (let tag of tagArr) {
+      /* generate HTML of the link */
+      let linkHTML = `<li><a href="#tag-${tag}">${tag}</a></li>`;
+
+      /* add generated code to html variable */
+      html += linkHTML;
+
+      /* [NEW] check if this link is NOT already in allTags */
+      if (allTags.indexOf(linkHTML) == -1) {
+        /* [NEW] add generated code to allTags array */
+        allTags.push(linkHTML);
+        console.log(allTags)
+      }
+    }
+    /* END LOOP: for each tag */
+
+    /* insert HTML of all the links into the tags wrapper */
+
+   tagList.innerHTML += html;
+  }
+
+  /* END LOOP: for every article: */
+
+  /* [NEW] find list of tags in right column */
+  const tagList = document.querySelector(optTagsListSelector);
+
+  /* [NEW] add html from allTags to tagList */
+  console.log(tagList)
+  tagList.innerHTML = allTags.join(" ");
+}
+
+generateRHSTags();
