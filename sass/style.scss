@@ -113,7 +113,6 @@ body {
 
 /* Post */
 
-
 .post {
   display: block;
   opacity: 0%;
@@ -139,6 +138,34 @@ body {
   }
 }
 
-a{
+a {
   padding-right: 5px;
+}
+
+.tag-size-1 {
+  font-size: 18px;
+  color: rgb(199, 167, 107);
+}
+.tag-size-2 {
+  font-size: 22px;
+  color: rgb(95, 209, 87)
+}
+.tag-size-3 {
+  font-size: 26px;
+  color: rgb(178, 68, 150)
+
+}
+.tag-size-4 {
+  font-size: 30px;
+  color: rgb(58, 32, 142)
+}
+.tag-size-5 {
+  font-size: 34px;
+  color: rgb(7, 234, 26)
+
+}
+
+.list.tags li
+{
+  display: inline-flex;
 }
