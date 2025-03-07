@@ -6,12 +6,12 @@ Project utilises clean JavaScript and templating library Handlebars. During thhe
 The ineractive page includes tag cloud (depending on quantity of articles connected with keywords it will increase or decrease in size). Tags enable the page to filter displayed articles.
 
 
-![JavaScriptBlog]()
+![JavaScriptBlog](https://github.com/hyldrix/javascript-blog/blob/main/preview/javascriptblog.png?raw=true)
 
 
 ## Where to view
 
-- **Live Preview:** []()
+- **Live Preview:** [https://hyldrix.github.io/javascript-blog/](https://hyldrix.github.io/javascript-blog/)
 
 ## Repository
 
