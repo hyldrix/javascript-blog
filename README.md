@@ -43,7 +43,7 @@ npm run test
 ```
 
 ## Technologies & tools
-- HTML, CSS, Sass, Bootstrap, Handlebars
+- HTML, CSS, Sass, Handlebars
 
 
-<img src="https://skillicons.dev/icons?i=html,css,sass,js,bootstrap," alt="Tech Stack" />
+<img src="https://skillicons.dev/icons?i=html,css,sass,js," alt="Tech Stack" />
